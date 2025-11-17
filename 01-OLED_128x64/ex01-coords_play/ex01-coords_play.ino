@@ -38,6 +38,7 @@ void loop()
   u8g2.sendBuffer();
 
   //Second string
+  
   u8g2.clearBuffer();
   text_width = u8g2.getStrWidth("Friends");
   u8g2.drawStr(centre_x, 32, "Friends");
