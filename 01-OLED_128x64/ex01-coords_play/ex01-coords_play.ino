@@ -18,19 +18,31 @@ void loop()
   // -----------Centre Alignment----------------
   /*
     For perfect centre use this
+    text_width = u8g2.getStrWidth("text");
     Formula:
-    centre_x = (128 - text_width) / 2 ---tengah kan X-axis
-    centre_y = (64 + font_height) / 2 ---tengah kan Y-axis
+      centre_x = (128 - text_width) / 2 ---tengah kan X-axis
+      centre_y = (64 + font_height) / 2 ---tengah kan Y-axis
+    u8g2.drawStr(center_x, 32, "text");
+    'agak leceh tapi nnti buat function' --> easy to use
   */
   int text_width;
   int centre_x;
   u8g2.clearBuffer();
   u8g2.setFont(u8g2_font_ncenB08_tr);
+
+  //First string
   text_width = u8g2.getStrWidth("Hello");
   centre_x = (128 - text_width) / 2;
   u8g2.drawStr(centre_x, 32, "Hello");
+  delay(5000);
   u8g2.sendBuffer();
 
+  //Second string
+  u8g2.clearBuffer();
+  text_width = u8g2.getStrWidth("Friends");
+  u8g2.drawStr(centre_x, 32, "Friends");
+  delay(5000);
+  u8g2.sendBuffer();
   // -----------Baseline Demonstration----------
   /*
   u8g2.clearBuffer();
