@@ -1,5 +1,14 @@
 /*-Ju$t-NoT3s-
 kalau multiple animations occur at the same time, dia akan jittering
+Animation Cycle:
+  1) clearBuff
+  2) draw (text atau shape)
+  3) sendBuff
+  4) update Position x and y
+  5) delay untuk control speed 
+
+! Delay makin kecik , makin banyak fps (frame per second) = animation CANTEK!!
+
 */
 
 #include <Arduino.h>
@@ -24,7 +33,8 @@ void loop()
   u8g2.drawStr(20, y, "WORLD!");
   u8g2.sendBuffer();
 
-  y++;
+  y++; // Move the object (ke bawah)
+
   if (y > 64)
   {
     y = -10; //reset dari Atas
@@ -38,7 +48,8 @@ void loop()
   u8g2.drawStr(x, 32, "HELLO!");
   u8g2.sendBuffer();
 
-  x--; //gerak ke Kiri Terussss
+  x--; //Move the object (ke kiri)
+
   if (x < -u8g2.getStrWidth("HELLO"))
   {
     x = 128;
