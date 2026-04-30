@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
+import datetime
 import sys
 
 new_task = {
     "id": len(tasks) + 1,
     "description": "",
     "status": ["todo", "in-progress", "done"],
-    "createdAt": "",
-    "updatedAt": "",
+    "createdAt": datetime.datetime.now(),
+    "updatedAt": "datetime.datetime.now()",
 }
 
 
