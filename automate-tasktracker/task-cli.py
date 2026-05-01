@@ -37,5 +37,5 @@ if __name__ == "__main__":
     main()
 
 
-#for input_list in range(1, len(sys.argv)):
-        #    print(f"Task added: {sys.argv[input_list]}")
+# for input_list in range(1, len(sys.argv)):
+#  print(f"Task added: {sys.argv[input_list]}")
