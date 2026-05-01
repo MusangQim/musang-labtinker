@@ -4,10 +4,10 @@ import sys
 
 new_task = {
     "id": len(tasks) + 1,
-    "description": "",
-    "status": ["todo", "in-progress", "done"],
+    "description": sys.argv[2],
+    "status": "todo",
     "createdAt": datetime.datetime.now(),
-    "updatedAt": "datetime.datetime.now()",
+    "updatedAt": datetime.datetime.now()
 }
 
 
